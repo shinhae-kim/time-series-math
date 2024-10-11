@@ -78,14 +78,14 @@ public class DynamicTimeWarpingDistance implements GenericDistanceMeasure<double
         }
 
         // [Modified, 101124] Extracting input parameters that caused the generation of duplicated traces
-        System.out.println("Calling computeKeoghLowerBound")
+        System.out.println("Calling computeKeoghLowerBound");
         LowerBound keoghLowerBound = computeKeoghLowerBound(a, b, n, radius, transformedCutOff);
         if (keoghLowerBound.value == Double.POSITIVE_INFINITY) {
             return Double.POSITIVE_INFINITY;
         }
 
         // [Modified, 101124] Extracting input parameters that caused the generation of duplicated traces
-        System.out.println("Calling computeLemireLowerBound")
+        System.out.println("Calling computeLemireLowerBound");
         LowerBound lemireLowerBound = computeLemireLowerBound(b, keoghLowerBound, n, radius, transformedCutOff);
         if (lemireLowerBound.value == Double.POSITIVE_INFINITY) {
             return Double.POSITIVE_INFINITY;
@@ -235,7 +235,7 @@ public class DynamicTimeWarpingDistance implements GenericDistanceMeasure<double
      */
     protected Envelope computeLemireEnvelope(double[] v, int n, int radius) {
         // [Modified, 101124] Extracting input parameters that caused the generation of duplicated traces
-        System.out.println("[V: " + Arrays.toString(v) + ", N: " + n + ", RADIUS: " + radius + "]")
+        System.out.println("[V: " + Arrays.toString(v) + ", N: " + n + ", RADIUS: " + radius + "]");
         int w = 2 * radius + 1;
         double[] upper = new double[n];
         double[] lower = new double[n];
