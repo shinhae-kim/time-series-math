@@ -23,6 +23,8 @@ import ro.hasna.ts.math.normalization.ZNormalizer;
 
 import java.util.Deque;
 import java.util.LinkedList;
+// [Modified, 101124] Extracting input parameters that caused the generation of duplicated traces
+import java.util.Arrays;
 
 /**
  * Calculates the distance between two vectors using Dynamic Time Warping.
